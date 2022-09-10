@@ -1,11 +1,15 @@
 /*=============== CHANGE BACKGROUND HEADER ===============*/
-function scrollHeader(){
-    const header = document.getElementById('header')
-    // When the scroll is > 50 viewport height, add the scroll-header class to the header tag
-    if(this.scrollY >= 50) header.classList.add('scroll-header');
-    else header.classList.remove('scrool-header')
+const header = document.querySelector('header');
+    window.onscroll = () =>{
+    header.classList.toggle('scroll-header', window.scrollY > 0)
 }
-window.addEventListener('scroll', scrollHeader)
+// function scrollHeader(){
+//     const header = document.getElementById('header')
+//     // When the scroll is > 50 viewport height, add the scroll-header class to the header tag
+//     if(this.scrollY >= 50) header.classList.add('scroll-header');
+//     else header.classList.remove('scroll-header')
+// }
+// window.addEventListener('scroll', scroll-header)
 
 
 /*=============== SERVICES MODAL ===============*/
@@ -32,21 +36,12 @@ modalClose.forEach((mc) =>{
 
 /*=============== MIXITUP FILTER PORTFOLIO ===============*/
 let mixerPortfolio = mixitup('.work_container', {
-    selectors:{
+    selectors: {
         target: '.work_card'
     }, animation:{
         duration: 300
     }
 });
-
-/* Link active work */ 
-const changeWork = document.querySelectorAll('.work_item')
-
-function activeWork(){
-    changeWork.forEach(c=> i.classList.remove('active-work'))
-    this.classList.add('active-work')
-}
-// changeWork.forEach(c => i.addEventListener('click', 'activeWork'))
 
 /*===============Slider  TESTIMONIAL(No SWIPER Due to regular class update)===============*/
 let slideIndex = 0;
@@ -108,3 +103,19 @@ AOS.init({
     duration: 1000,
     easing: 'ease-in-out'
   });
+
+
+
+/* Link active work */ 
+const changeWork = document.querySelectorAll('.work_item')
+
+function activeWork(){
+    changeWork.forEach(c=> i.classList.remove('active-work'))
+    this.classList.add('active-work');
+}
+changeWork.forEach(c => i.addEventListener('click', 'activeWork'));
+
+/*================Loader=======================*/
+
+
+/*================Loader Ends=======================*/
