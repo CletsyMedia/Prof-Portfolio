@@ -642,7 +642,15 @@
 
                     <div class="contact_content">
                         <h3 class="contact_title">Draft me your project</h3> 
-                        <form action="https://formsubmit.co/55e5b1c56655cdaf2b75b17586cb5493" method="POST" class=" contact_form">
+                        <form action="https://formsubmit.co/55e5b1c56655cdaf2b75b17586cb5493" method="POST" class="contact_form">
+                            <!-- Honeypot -->
+                            <input type="text" name="_honey" style="display:none;">
+                            <!-- Disable captcha -->
+                            <input type="hidden" name="_captcha" value="false">
+
+                            <!-- Display success msg -->
+                            <input type="hidden" name="_next" value="https://cletsymedia.github.io/Prof-Portfolio/success.html">
+                            
                             <div class="contact_form-div">
                                 <label for="" class="contact_form-tag">Name</label>
                                 <input type="text" name="Name" placeholder="Enter names" class="contact_form-input" required>
@@ -657,11 +665,7 @@
                                 <label for="" class="contact_form-tag">Project</label>
                                 <textarea name="Project" id="" placeholder="Write your project" cols="30" rows="10" class="contact_form-input" required></textarea>
                             </div>
-                            <!-- <div class="contact_form-div">
-                                <label for="" class="contact_form-tag">Upload Sample</label>
-                                <input type="file" name="myfile" class="contact_form-input">
-                                <input type="submit" value="Submit" >
-                            </div> -->
+                            
                             <button type="submit" class="button">Send <i class="fab fa-telegram"></i></button>
                         </form>
                     </div>
