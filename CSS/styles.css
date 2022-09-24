@@ -297,11 +297,57 @@ body.light-theme{
   /* color: var(--title-color); */
   margin-bottom: 0.25rem;
 }
-.home_education{
-  color: var(--text-color);
-  margin-top: 0.3rem;
-  margin-bottom: 2.5rem;
+/* Text Anime */
+.wrapper{
+  display: inline-flex;
+  margin: 0.3rem 0 2.5rem 0;
 }
+.wrapper .home_txts{
+  line-height: 1.5;
+  margin-left:5px;
+  line-height:30px;
+  height:30px;
+  overflow: hidden;
+}
+.wrapper .static-txt{
+  font-size: 20px;
+}
+.home_txts li{
+  font-size:1.3rem;
+  color: var(--first-color);
+  text-align: left;
+  top: 0;
+  position: relative;
+  animation: slider 12s steps(4) infinite;
+  /* transition: all .5s ease; */
+}
+.home_txts li{
+  position: relative;
+}
+.home_txts li::after{
+  content: '';
+  left: 0;
+  position: absolute;
+  height: 100%;
+  background-color: var(--body-color);
+  width: 100%;
+  border-left:1.5px solid var(--first-color);
+  animation: typing 3s steps(5) infinite;
+}
+
+/* text animation */
+@keyframes slider{
+  100%{
+    top:-120px;
+  }
+}
+@keyframes typing{
+  100%{
+    left: 100%;
+    margin: 0 -30px 0 30px;
+  }
+}
+/* text animation ends */
 .home_name{
   font-size: var(--biggest-font-size);
 }
@@ -1122,11 +1168,6 @@ body.light-theme{
   }
 
 } 
-
-
-
-
-
 
 
 
