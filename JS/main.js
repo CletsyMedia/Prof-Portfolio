@@ -34,15 +34,6 @@ modalClose.forEach((mc) =>{
     })
 })
 
-/*=============== MIXITUP FILTER PORTFOLIO ===============*/
-let mixerPortfolio = mixitup('.work_container', {
-    selectors: {
-        target: '.work_card'
-    }, animation:{
-        duration: 300
-    }
-});
-
 /*===============Slider  TESTIMONIAL(No SWIPER Due to regular class update)===============*/
 let slideIndex = 0;
 showSlides();
@@ -104,16 +95,22 @@ AOS.init({
     easing: 'ease-in-out'
   });
 
-
-
-/* Link active work */ 
-const changeWork = document.querySelectorAll('.work_item')
-
+  /*=============== MIXITUP FILTER PORTFOLIO ===============*/
+let mixerPortfolio = mixitup('.work_container', {
+  selectors: {
+      target: '.work_card'
+  }, 
+  animation:{
+      duration: 300
+  }
+});
+/* Link active work */
+const linkWork = document.querySelectorAll('.work_item')
 function activeWork(){
-    changeWork.forEach(c=> i.classList.remove('active-work'))
-    this.classList.add('active-work');
+  linkWork.forEach(l=> l.classList.remove('active-work'))
+  this.classList.add('active-work');
 }
-changeWork.forEach(c => i.addEventListener('click', 'activeWork'));
+linkWork.forEach(l=> l.addEventListener('click', activeWork))
 
 /*================Loader=======================*/
 
