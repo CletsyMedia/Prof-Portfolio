@@ -87,14 +87,6 @@ let theme = document.querySelector('#theme-button');
       document.body.classList.remove('light-theme');
     }
   };
-
-/*=============== AOS SCROLL REVEAL ANIMATION ===============*/
-AOS.init({
-    offset: 400,
-    duration: 1000,
-    easing: 'ease-in-out'
-  });
-
   /*=============== MIXITUP FILTER PORTFOLIO ===============*/
 let mixerPortfolio = mixitup('.work_container', {
   selectors: {
@@ -112,7 +104,83 @@ function activeWork(){
 }
 linkWork.forEach(l=> l.addEventListener('click', activeWork))
 
-/*================Loader=======================*/
+/*================Form Validation=======================*/
+let contactName = document.querySelector(".contact-name");
+let contactErr = document.querySelector(".contact-error");
+let nameValid = document.querySelector(".nameValid")
+
+let contactEmail = document.querySelector(".contact-email");
+let emailErr = document.querySelector(".email-error");
+let emailValid = document.querySelector(".emailValid")
+
+let contactBox = document.querySelector(".contact-box");
+let boxErr = document.querySelector(".box-error");
+
+validateName=()=>{
+  let name = document.querySelector(".contact-name").value;
+  if(name.length == 0){
+    contactErr.style.display="block";
+    contactErr.innerHTML = "Name can't be empty!"
+    nameValid.style.display="none"
+    contactName.style.border="1px solid hsl(0, 100%, 74%)";
+    return false;
+  }
+    contactErr.style.display="none";
+    nameValid.style.display="block"
+    contactName.style.border="1px solid hsl(154, 59%, 51%)";
+    return true;
+
+}
+validateEmail=()=>{
+  let emailName = document.querySelector(".contact-email").value;
+  if(emailName.length == 0){
+    contactEmail.style.display="block";
+    emailErr.innerHTML = "Email can't be empty!"
+    emailValid.style.display="none"
+    contactEmail.style.border="1px solid hsl(0, 100%, 74%)";
+    return false;
+  }
+  if(!emailName.match(/^[A-Za-z\._\-[0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)){
+    contactEmail.style.display="block";
+    emailErr.innerHTML = "Email is invalid!"
+    emailValid.style.display="none"
+    contactEmail.style.border="1px solid hsl(0, 100%, 74%)";
+    return false;
+  }
+    emailErr.style.display="none";
+    emailValid.style.display="block"
+    contactEmail.style.border="1px solid hsl(154, 59%, 51%)";
+    return true;
+}
+
+validateBox=()=>{
+  let boxName = document.querySelector(".contact-box").value;
+  if(boxName.length == 0){
+    contactBox.style.display="block";
+    boxErr.innerHTML = "Write something!";
+    contactBox.style.border="1px solid hsl(0, 100%, 74%)";
+    return false;
+  }
+    boxErr.style.display="none";
+    contactBox.style.border="1px solid hsl(154, 59%, 51%)";
+
+}
+const formValidation = document.getElementById("form");
+
+formValidation.addEventListener('submit', event =>{
+    if(!validateName() && !validateEmail() && !validateBox()){
+      event.preventDefault();
+      return false;
+    }
+});   
+
+/*================Form Validation ends=======================*/
 
 
-/*================Loader Ends=======================*/
+
+/*=============== AOS SCROLL REVEAL ANIMATION ===============*/
+AOS.init({
+  offset: 400,
+  duration: 1000,
+  easing: 'ease-in-out'
+});
