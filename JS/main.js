@@ -155,8 +155,7 @@ function onSuccess(contactName){
   let msgEle = parent.querySelector("span");
   let validEl = parent.querySelector("small");
   msgEle.style.display = "none";
-  validEl.style.display="block"
-  validEl.style.display="block"
+  validEl.style.display="block";
   parent.classList.remove("onError");
   contactBox.style.border="1px solid hsl(154, 59%, 51%)";
   parent.classList.add("onSuccess");
