@@ -886,12 +886,6 @@ body.light-theme{
   resize: none;
 }
 /* Actie statement of form */
-.contact_form-div.onSuccess input{
-  border:1px solid hsl(154, 59%, 51%);
-}
-.contact_form-div.onError input  {
-  border:1px solid hsl(0, 100%, 74%);
-}
 
 /* Actie statement of form ends */
 /*Form Success */
