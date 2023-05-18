@@ -105,74 +105,65 @@ function activeWork(){
 linkWork.forEach(l=> l.addEventListener('click', activeWork))
 
 /*================Form Validation=======================*/
-let contactName = document.querySelector(".contact-name");
-let contactErr = document.querySelector(".contact-error");
-let nameValid = document.querySelector(".nameValid")
+const form = document.getElementById('form');
+const contactName = document.querySelector(".contact-name");
+const contactEmail = document.querySelector(".contact-email");
+const contactBox = document.querySelector(".contact-box");
 
-let contactEmail = document.querySelector(".contact-email");
-let emailErr = document.querySelector(".email-error");
-let emailValid = document.querySelector(".emailValid")
+form.onsubmit=(e)=>{
+  e.preventDefault();
+  validateClient();
+};
 
-let contactBox = document.querySelector(".contact-box");
-let boxErr = document.querySelector(".box-error");
-
-validateName=()=>{
-  let name = document.querySelector(".contact-name").value;
-  if(name.length == 0){
-    contactErr.style.display="block";
-    contactErr.innerHTML = "Name can't be empty!"
-    nameValid.style.display="none"
-    contactName.style.border="1px solid hsl(0, 100%, 74%)";
-    return false;
+function validateClient(){
+  //? UserName
+  if(contactName.value.trim() === ""){
+    onError(contactName, "Client's name is required!");
+  }else{
+   onSuccess(contactName);
   }
-    contactErr.style.display="none";
-    nameValid.style.display="block"
-    contactName.style.border="1px solid hsl(154, 59%, 51%)";
-    return true;
+  //? Email
+  if(contactEmail.value.trim() === ""){
+      onError(contactEmail, "Client's email is required!");
 
-}
-validateEmail=()=>{
-  let emailName = document.querySelector(".contact-email").value;
-  if(emailName.length == 0){
-    contactEmail.style.display="block";
-    emailErr.innerHTML = "Email can't be empty!"
-    emailValid.style.display="none"
-    contactEmail.style.border="1px solid hsl(0, 100%, 74%)";
-    return false;
-  }
-  if(!emailName.match(/^[A-Za-z\._\-[0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)){
-    contactEmail.style.display="block";
-    emailErr.innerHTML = "Email is invalid!"
-    emailValid.style.display="none"
-    contactEmail.style.border="1px solid hsl(0, 100%, 74%)";
-    return false;
-  }
-    emailErr.style.display="none";
-    emailValid.style.display="block"
-    contactEmail.style.border="1px solid hsl(154, 59%, 51%)";
-    return true;
-}
-
-validateBox=()=>{
-  let boxName = document.querySelector(".contact-box").value;
-  if(boxName.length == 0){
-    contactBox.style.display="block";
-    boxErr.innerHTML = "Write something!";
-    contactBox.style.border="1px solid hsl(0, 100%, 74%)";
-    return false;
-  }
-    boxErr.style.display="none";
-    contactBox.style.border="1px solid hsl(154, 59%, 51%)";
-
-}
-const formValidation = document.getElementById("form");
-
-formValidation.addEventListener('submit', event =>{
-    if(!validateName() && !validateEmail() && !validateBox()){
-      event.preventDefault();
-      return false;
+  }else{
+    if(!validEmail(contactEmail.value.trim())){
+      onError(contactEmail, "Client's email is invalid!");
+    }else{
+     onSuccess(contactEmail);
     }
-});   
+  }
+  //? BoxArea
+  if(contactBox.value.trim() === ""){
+    onError(contactBox, "Write something");
+  }else{
+    onSuccess(contactBox);
+  }
+}
+
+function onError(contactName, message){
+  let parent = contactName.parentElement;
+  let msgEle = parent.querySelector("span");
+  msgEle.style.display = "block";
+  parent.classList.add("onError");
+  parent.classList.remove("onSuccess");
+  contactBox.style.border="1px solid hsl(0, 100%, 74%)";
+  msgEle.innerHTML = message;
+}
+function onSuccess(contactName){
+  let parent = contactName.parentElement;
+  let msgEle = parent.querySelector("span");
+  let validEl = parent.querySelector("small");
+  msgEle.style.display = "none";
+  validEl.style.display="block"
+  validEl.style.display="block"
+  parent.classList.remove("onError");
+  contactBox.style.border="1px solid hsl(154, 59%, 51%)";
+  parent.classList.add("onSuccess");
+}
+function validEmail(contactEmail){
+  return /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(contactEmail);
+}
 
 /*================Form Validation ends=======================*/
 
