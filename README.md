@@ -10,7 +10,7 @@ I am a passionate and skilled professional with expertise in web development, gr
 In my portfolio, you'll find a selection of notable projects that showcase my capabilities. Each project includes a brief description and relevant links or live demos for more details.
 <br>
 <a href="https://cletsymedia.github.io/Prof-Portfolio/" target="_blank" rel="noopener noreferrer">
-  <img alt="Portfolio" src="https://img.shields.io/badge/Portfolio?style=for-the-badge&logo=github">
+  <img alt="Portfolio" src="https://img.shields.io/badge/View-Portfolio-gray?style=for-the-badge&logo=github">
 </a>
 
 </p>
