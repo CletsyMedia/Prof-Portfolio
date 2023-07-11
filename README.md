@@ -6,7 +6,13 @@ Welcome to my portfolio! This readme provides an overview of my work, skills, an
 I am a passionate and skilled professional with expertise in web development, graphic design, and content creation. Throughout my career, I have gained diverse experiences, enabling me to deliver creative and impactful solutions.
 
 ## Projects
+<p>
 In my portfolio, you'll find a selection of notable projects that showcase my capabilities. Each project includes a brief description and relevant links or live demos for more details.
+<br>
+<a href="https://github.com/CletsyMedia/Prof-Portfolio">
+  <img alt="Portfolio" src="https://img.shields.io/github/license/CletsyMedia/Prof-Portfolio?style=for-the-badge&logo=github">
+</a>
+</p>
 
 ## Skills
 - **Web Development:** Proficient in HTML, CSS, JavaScript, and experienced with frameworks and libraries like React. Strong understanding of responsive design and web accessibility best practices.
