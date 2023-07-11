@@ -1,26 +1,41 @@
-# Name of Project
-## Table of Contents
-- [Overview](#overview)
-- [Built With](#built-with)
-- [Features](#features)
-- [Contact](#contact)
-- [Acknowledgements](#acknowledgements)
-## Overview
-<!-- TODO: Add a screenshot of the live project.
-    1. Link to a 'live demo.'
-    2. Describe your overall experience in a couple of sentences.
-    3. List a few specific technical things that you learned or improved on.
-    4. Share any other tips or guidance for others attempting this or something similar.
- -->
-### Built With
-<!-- TODO: List any MAJOR libraries/frameworks (e.g. React, Tailwind) with links to their homepages. -->
-## Features
-<!-- TODO: List what specific 'user problems' that this application solves. -->
-## Contact
-<!-- TODO: Include icons and links to your RELEVANT, PROFESSIONAL 'DEV-ORIENTED' social media. LinkedIn and dev.to are minimum. -->
-## Acknowledgements
-<!-- TODO: List any blog posts, tutorials or plugins that you may have used to complete the project. Only list those that had a significant impact. Obviously, we all 'Google' stuff while working on our things, but maybe something in particular stood out as a 'major contributor' to your skill set for this project. -->
+# Portfolio Readme
 
-<!-- # Prof-Portfolio
-![logo](https://user-images.githubusercontent.com/109830247/184273066-09e82251-ed95-4c9a-8a16-460f7e6ee145.png) A portfolio that speaks for itself. -->
+Welcome to my portfolio! This readme provides an overview of my work, skills, and contact information. Feel free to explore my projects and get in touch for inquiries or collaboration opportunities.
 
+## About Me
+I am a passionate and skilled professional with expertise in web development, graphic design, and content creation. Throughout my career, I have gained diverse experiences, enabling me to deliver creative and impactful solutions.
+
+## Projects
+In my portfolio, you'll find a selection of notable projects that showcase my capabilities. Each project includes a brief description and relevant links or live demos for more details.
+
+## Skills
+- **Web Development:** Proficient in HTML, CSS, JavaScript, and experienced with frameworks and libraries like React. Strong understanding of responsive design and web accessibility best practices.
+- **Graphic Design:** Keen eye for design, creating visually appealing graphics, logos, and user interfaces. Proficient in Adobe XD, Figma, and other design tools.
+- **Content Creation:** Expertise in creating engaging content, including blog posts, articles, and social media content. Skilled at crafting persuasive copy tailored to different platforms and target audiences.
+
+## Contact Information
+I would love to connect with you! For questions, collaboration ideas, or just a chat, feel free to reach out using any of the following methods:
+
+<p align="left">
+<!-- Facebook Badge -->
+<a href="https://www.facebook.com/profile.php?id=100076488801469&mibextid=ZbWKwL">
+  <img alt="Facebook" src="https://img.shields.io/badge/Facebook-%231877F2.svg?&style=for-the-badge&logo=facebook&logoColor=white" />
+</a>
+
+<!-- LinkedIn Badge -->
+<a href="https://www.linkedin.com/in/cletussamuel">
+  <img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" />
+</a>
+
+<!-- Twitter Badge -->
+<a href="https://twitter.com/cletsymedia">
+  <img alt="Twitter" src="https://img.shields.io/badge/Twitter-%231DA1F2.svg?&style=for-the-badge&logo=twitter&logoColor=white" />
+</a>
+</p>
+
+Don't hesitate to get in touch—I'm looking forward to hearing from you!
+
+## License
+Unless stated otherwise, all projects and code in this portfolio are available under the <a href="https://github.com/CletsyMedia/CletsyMedia/blob/master/LICENSE">
+  <img alt="License" src="https://img.shields.io/github/license/CletsyMedia/CletsyMedia?style=for-the-badge&logo=github">
+</a>. Feel free to use them as inspiration or reference for your own projects.
