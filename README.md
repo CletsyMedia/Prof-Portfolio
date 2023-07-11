@@ -1,4 +1,4 @@
-# Portfolio Readme
+# Overview
 
 Welcome to my portfolio! This readme provides an overview of my work, skills, and contact information. Feel free to explore my projects and get in touch for inquiries or collaboration opportunities.
 
@@ -36,6 +36,7 @@ I would love to connect with you! For questions, collaboration ideas, or just a 
 Don't hesitate to get in touch—I'm looking forward to hearing from you!
 
 ## License
-Unless stated otherwise, all projects and code in this portfolio are available under the <a href="https://github.com/CletsyMedia/CletsyMedia/blob/master/LICENSE">
-  <img alt="License" src="https://img.shields.io/github/license/CletsyMedia/CletsyMedia?style=for-the-badge&logo=github">
-</a>. Feel free to use them as inspiration or reference for your own projects.
+Unless stated otherwise, all projects and code in this portfolio are available under the MIT License. Feel free to use them as inspiration or reference for your own projects.
+<a href="https://github.com/CletsyMedia/Prof-Portfolio/blob/main/LICENSE">
+  <img alt="License" src="https://img.shields.io/github/license/CletsyMedia/Prof-Portfolio?style=for-the-badge&logo=github">
+</a>
