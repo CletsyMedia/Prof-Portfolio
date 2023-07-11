@@ -105,74 +105,82 @@ function activeWork(){
 linkWork.forEach(l=> l.addEventListener('click', activeWork))
 
 /*================Form Validation=======================*/
-let contactName = document.querySelector(".contact-name");
-let contactErr = document.querySelector(".contact-error");
-let nameValid = document.querySelector(".nameValid")
+const formValid= document.getElementById("form");
+const contactName = document.querySelector(".contact-name");
+const contactErr = document.querySelector(".contact-error");
+const nameValid = document.querySelector(".nameValid")
 
-let contactEmail = document.querySelector(".contact-email");
-let emailErr = document.querySelector(".email-error");
-let emailValid = document.querySelector(".emailValid")
+const emailPattern = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+const contactEmail = document.querySelector(".contact-email");
+const emailErr = document.querySelector(".email-error");
+const emailValid = document.querySelector(".emailValid")
 
-let contactBox = document.querySelector(".contact-box");
-let boxErr = document.querySelector(".box-error");
+const contactBox = document.querySelector(".contact-box");
+const boxErr = document.querySelector(".box-error");
 
-validateName=()=>{
-  let name = document.querySelector(".contact-name").value;
-  if(name.length == 0){
-    contactErr.style.display="block";
-    contactErr.innerHTML = "Name can't be empty!"
-    nameValid.style.display="none"
-    contactName.style.border="1px solid hsl(0, 100%, 74%)";
-    return false;
-  }
-    contactErr.style.display="none";
-    nameValid.style.display="block"
-    contactName.style.border="1px solid hsl(154, 59%, 51%)";
-    return true;
 
-}
-validateEmail=()=>{
-  let emailName = document.querySelector(".contact-email").value;
-  if(emailName.length == 0){
-    contactEmail.style.display="block";
-    emailErr.innerHTML = "Email can't be empty!"
-    emailValid.style.display="none"
-    contactEmail.style.border="1px solid hsl(0, 100%, 74%)";
-    return false;
-  }
-  if(!emailName.match(/^[A-Za-z\._\-[0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)){
-    contactEmail.style.display="block";
-    emailErr.innerHTML = "Email is invalid!"
-    emailValid.style.display="none"
-    contactEmail.style.border="1px solid hsl(0, 100%, 74%)";
-    return false;
-  }
-    emailErr.style.display="none";
-    emailValid.style.display="block"
-    contactEmail.style.border="1px solid hsl(154, 59%, 51%)";
-    return true;
-}
+formValid.onsubmit=(e)=>{
+  let isValid = true;
 
-validateBox=()=>{
-  let boxName = document.querySelector(".contact-box").value;
-  if(boxName.length == 0){
-    contactBox.style.display="block";
-    boxErr.innerHTML = "Write something!";
-    contactBox.style.border="1px solid hsl(0, 100%, 74%)";
-    return false;
-  }
-    boxErr.style.display="none";
-    contactBox.style.border="1px solid hsl(154, 59%, 51%)";
-
-}
-const formValidation = document.getElementById("form");
-
-formValidation.addEventListener('submit', event =>{
-    if(!validateName() && !validateEmail() && !validateBox()){
-      event.preventDefault();
-      return false;
+  // Validating name
+  validateName=()=>{
+  let name = contactName.value.trim();
+    if(name.length == 0){
+      contactErr.style.display="block";
+      contactErr.innerHTML = "Name can't be empty!"
+      nameValid.style.display="none"
+      contactName.style.border="1px solid hsl(0, 100%, 74%)";
+      isValid = false;
+    }else{
+      contactErr.style.display="none";
+      nameValid.style.display="block"
+      contactName.style.border="1px solid hsl(154, 59%, 51%)";
     }
-});   
+  }
+  validateName();
+
+  // validateEmail();
+  validateEmail=()=>{
+  const validEmail = contactEmail.value.trim();
+    if (validEmail.length == 0){
+      contactEmail.style.display="block";
+      emailErr.innerHTML = "Email can't be empty!"
+      emailValid.style.display="none"
+      contactEmail.style.border="1px solid hsl(0, 100%, 74%)";
+      isValid = false;
+    }else if(!validEmail.match(emailPattern)){
+      contactEmail.style.display="block";
+      emailErr.innerHTML = "Email is invalid!"
+      emailValid.style.display="none"
+      contactEmail.style.border="1px solid hsl(0, 100%, 74%)";
+      isValid = false;
+    }else {
+      emailErr.style.display="none";
+      emailValid.style.display="block"
+      contactEmail.style.border="1px solid hsl(154, 59%, 51%)";
+    }
+  }
+  validateEmail();
+  
+  // validate message
+  validateBox=()=>{
+  let msg = contactBox.value.trim();
+    if ( msg.length == 0){
+      contactBox.style.display="block";
+      boxErr.innerHTML = "Write something!";
+      contactBox.style.border="1px solid hsl(0, 100%, 74%)";
+      isValid = false;
+    }else {
+      boxErr.style.display="none";
+      contactBox.style.border="1px solid hsl(154, 59%, 51%)";
+    }
+  }
+  validateBox();
+
+    if (!isValid) {
+      e.preventDefault(); // Prevent form submission if validation fails
+    }
+  }
 
 /*================Form Validation ends=======================*/
 
