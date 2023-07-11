@@ -36,7 +36,10 @@ I would love to connect with you! For questions, collaboration ideas, or just a 
 Don't hesitate to get in touch—I'm looking forward to hearing from you!
 
 ## License
+<p>
 Unless stated otherwise, all projects and code in this portfolio are available under the MIT License. Feel free to use them as inspiration or reference for your own projects.
+<br>
 <a href="https://github.com/CletsyMedia/Prof-Portfolio/blob/main/LICENSE">
   <img alt="License" src="https://img.shields.io/github/license/CletsyMedia/Prof-Portfolio?style=for-the-badge&logo=github">
 </a>
+</p>
